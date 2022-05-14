@@ -26,23 +26,38 @@ public class UserService: IUserService
 
     }
 
-    public Task<IEnumerable<UserDTO>> GetAllAsync()
+    public async Task<IEnumerable<UserDTO>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        var users = await _unitOfWork.Users.GetAllAsync();
+        var userDtos = _mapper.Map<IEnumerable<User>, IEnumerable<UserDTO>>(users);
+        return userDtos;
+
     }
 
-    public Task<UserDTO> GetByIdAsync(string id)
+    public async Task<UserDTO> GetByIdAsync(string id)
     {
-        throw new NotImplementedException();
+        var user = await _unitOfWork.Users.GetByIdAsync(id);
+        var userDto = _mapper.Map<UserDTO>(user);
+        return userDto;
     }
 
-    public Task UpdateAsync(UserDTO userDto)
+    public async Task UpdateAsync(UserDTO userDto)
     {
-        throw new NotImplementedException();
+        var user = _mapper.Map<User>(userDto);
+        _unitOfWork.Users.Update(user);
+        await _unitOfWork.CompleteAsync();
     }
 
-    public Task RemoveAsync(string id)
+    public async Task RemoveAsync(string id)
     {
-        throw new NotImplementedException();
+        var user = await GetUserByIdAsync(id);
+        _unitOfWork.Users.Remove(user);
+        await _unitOfWork.CompleteAsync();
+    }
+
+
+    public async Task<User> GetUserByIdAsync(string id)
+    {
+        return await _unitOfWork.Users.GetByIdAsync(id);
     }
 }

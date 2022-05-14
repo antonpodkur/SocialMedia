@@ -1,4 +1,5 @@
 using BLL.DTOs;
+using DAL.Entities;
 
 namespace BLL.Abstractions;
 
@@ -9,4 +10,5 @@ public interface IPostService
     Task<PostDTO> GetByIdAsync(string id);
     Task UpdateAsync(PostDTO postDto);
     Task RemoveAsync(string id);
+    Task<Post> GetPostByIdAsync(string id);
 }

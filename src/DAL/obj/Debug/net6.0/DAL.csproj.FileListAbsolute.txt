@@ -12,3 +12,17 @@
 /Users/antonpodkur/RiderProjects/Test/src/DAL/obj/Debug/net6.0/DAL.pdb
 /Users/antonpodkur/RiderProjects/Test/src/DAL/obj/Debug/net6.0/DAL.genruntimeconfig.cache
 /Users/antonpodkur/RiderProjects/Test/src/DAL/obj/Debug/net6.0/ref/DAL.dll
+/home/anton/RiderProjects/SocialMedia/src/DAL/bin/Debug/net6.0/DAL.deps.json
+/home/anton/RiderProjects/SocialMedia/src/DAL/bin/Debug/net6.0/DAL.runtimeconfig.json
+/home/anton/RiderProjects/SocialMedia/src/DAL/bin/Debug/net6.0/DAL.dll
+/home/anton/RiderProjects/SocialMedia/src/DAL/bin/Debug/net6.0/ref/DAL.dll
+/home/anton/RiderProjects/SocialMedia/src/DAL/bin/Debug/net6.0/DAL.pdb
+/home/anton/RiderProjects/SocialMedia/src/DAL/obj/Debug/net6.0/DAL.csproj.AssemblyReference.cache
+/home/anton/RiderProjects/SocialMedia/src/DAL/obj/Debug/net6.0/DAL.GeneratedMSBuildEditorConfig.editorconfig
+/home/anton/RiderProjects/SocialMedia/src/DAL/obj/Debug/net6.0/DAL.AssemblyInfoInputs.cache
+/home/anton/RiderProjects/SocialMedia/src/DAL/obj/Debug/net6.0/DAL.AssemblyInfo.cs
+/home/anton/RiderProjects/SocialMedia/src/DAL/obj/Debug/net6.0/DAL.csproj.CoreCompileInputs.cache
+/home/anton/RiderProjects/SocialMedia/src/DAL/obj/Debug/net6.0/DAL.dll
+/home/anton/RiderProjects/SocialMedia/src/DAL/obj/Debug/net6.0/ref/DAL.dll
+/home/anton/RiderProjects/SocialMedia/src/DAL/obj/Debug/net6.0/DAL.pdb
+/home/anton/RiderProjects/SocialMedia/src/DAL/obj/Debug/net6.0/DAL.genruntimeconfig.cache

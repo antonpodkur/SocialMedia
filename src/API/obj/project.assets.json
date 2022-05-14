@@ -1001,7 +1001,10 @@
         },
         "runtime": {
           "bin/placeholder/DAL.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -2655,19 +2658,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/antonpodkur/.nuget/packages/": {}
+    "/home/anton/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/antonpodkur/RiderProjects/Test/src/API/API.csproj",
+      "projectUniqueName": "/home/anton/RiderProjects/SocialMedia/src/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/antonpodkur/RiderProjects/Test/src/API/API.csproj",
-      "packagesPath": "/Users/antonpodkur/.nuget/packages/",
-      "outputPath": "/Users/antonpodkur/RiderProjects/Test/src/API/obj/",
+      "projectPath": "/home/anton/RiderProjects/SocialMedia/src/API/API.csproj",
+      "packagesPath": "/home/anton/.nuget/packages/",
+      "outputPath": "/home/anton/RiderProjects/SocialMedia/src/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/antonpodkur/.nuget/NuGet/NuGet.Config"
+        "/home/anton/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2679,8 +2682,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/antonpodkur/RiderProjects/Test/src/DAL/DAL.csproj": {
-              "projectPath": "/Users/antonpodkur/RiderProjects/Test/src/DAL/DAL.csproj"
+            "/home/anton/RiderProjects/SocialMedia/src/DAL/DAL.csproj": {
+              "projectPath": "/home/anton/RiderProjects/SocialMedia/src/DAL/DAL.csproj"
             }
           }
         }
@@ -2720,6 +2723,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.2, 6.0.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2728,7 +2737,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
