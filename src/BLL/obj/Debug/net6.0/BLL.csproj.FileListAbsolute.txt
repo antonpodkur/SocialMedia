@@ -1,0 +1,15 @@
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/bin/Debug/net6.0/BLL.deps.json
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/bin/Debug/net6.0/BLL.dll
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/bin/Debug/net6.0/BLL.pdb
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/bin/Debug/net6.0/DAL.dll
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/bin/Debug/net6.0/DAL.pdb
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/BLL.csproj.AssemblyReference.cache
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/BLL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/BLL.AssemblyInfoInputs.cache
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/BLL.AssemblyInfo.cs
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/BLL.csproj.CoreCompileInputs.cache
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/BLL.csproj.CopyComplete
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/BLL.dll
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/refint/BLL.dll
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/BLL.pdb
+/Users/antonpodkur/RiderProjects/SocialMedia/src/BLL/obj/Debug/net6.0/ref/BLL.dll

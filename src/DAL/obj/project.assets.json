@@ -2349,19 +2349,19 @@
     ]
   },
   "packageFolders": {
-    "/home/anton/.nuget/packages/": {}
+    "/Users/antonpodkur/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/anton/RiderProjects/SocialMedia/src/DAL/DAL.csproj",
+      "projectUniqueName": "/Users/antonpodkur/RiderProjects/SocialMedia/src/DAL/DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "/home/anton/RiderProjects/SocialMedia/src/DAL/DAL.csproj",
-      "packagesPath": "/home/anton/.nuget/packages/",
-      "outputPath": "/home/anton/RiderProjects/SocialMedia/src/DAL/obj/",
+      "projectPath": "/Users/antonpodkur/RiderProjects/SocialMedia/src/DAL/DAL.csproj",
+      "packagesPath": "/Users/antonpodkur/.nuget/packages/",
+      "outputPath": "/Users/antonpodkur/RiderProjects/SocialMedia/src/DAL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/anton/.nuget/NuGet/NuGet.Config"
+        "/Users/antonpodkur/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2432,18 +2432,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.2, 6.0.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }

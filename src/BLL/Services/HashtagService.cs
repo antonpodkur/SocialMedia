@@ -25,28 +25,34 @@ public class HashtagService: IHashtagService
         return _mapper.Map<HashtagDTO>(hashtag);
     }
 
-    public Task<IEnumerable<HashtagDTO>> GetAllAsync()
+    public async Task<IEnumerable<HashtagDTO>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        var hashtags = await _unitOfWork.Hashtags.GetAllAsync();
+        return _mapper.Map<IEnumerable<HashtagDTO>>(hashtags);
     }
 
-    public Task<HashtagDTO> GetByIdAsync(string id)
+    public async Task<HashtagDTO> GetByIdAsync(string id)
     {
-        throw new NotImplementedException();
+        var hashtag = await _unitOfWork.Hashtags.GetByIdAsync(id);
+        return _mapper.Map<HashtagDTO>(hashtag);
     }
 
-    public Task UpdateAsync(HashtagDTO hashtagDTO)
+    public async Task UpdateAsync(HashtagDTO hashtagDTO)
     {
-        throw new NotImplementedException();
+        var hashtag = _mapper.Map<Hashtag>(hashtagDTO);
+        _unitOfWork.Hashtags.Update(hashtag);
+        await _unitOfWork.CompleteAsync();
     }
 
-    public Task RemoveAsync(string id)
+    public async Task RemoveAsync(string id)
     {
-        throw new NotImplementedException();
+        var hashtag = await _unitOfWork.Hashtags.GetByIdAsync(id);
+        _unitOfWork.Hashtags.Remove(hashtag);
+        await _unitOfWork.CompleteAsync();
     }
 
-    public Task<Hashtag> GetHashtagByIdAsync(string id)
+    public async Task<Hashtag> GetHashtagByIdAsync(string id)
     {
-        throw new NotImplementedException();
+        return await _unitOfWork.Hashtags.GetByIdAsync(id);
     }
 }
