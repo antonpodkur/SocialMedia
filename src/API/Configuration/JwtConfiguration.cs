@@ -2,7 +2,8 @@ namespace API.Configuration;
 
 public class JwtConfiguration
 {
-    public string Secret { get; }
-    public string Issuer { get; }
-    public string Audience { get; }
+    public string Secret { get; set; }
+    public string Issuer { get; set; }
+    public string Audience { get; set; }
+    public int expireHours { get; set; }
 }

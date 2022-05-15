@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using API.Configuration;
 using AutoMapper;
 using BLL.DTOs;
 using DAL.Entities;
@@ -38,7 +39,7 @@ public class UserController : ControllerBase
 
     }
     
-    [HttpPut("updatecurrent")]
+    [HttpPut("update-current")]
     public async Task<ActionResult<UserDTO>> UpdateCurrentUser (UserDTO updatedUser)
     {
         var user = await _userManager.FindByIdAsync(HttpContext.User.FindFirstValue("id"));
@@ -48,6 +49,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPut("update/{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<UserDTO>> UpdateUserById(string id,UserDTO updatedUser)
     {
         var user = await _userManager.FindByIdAsync(id);
