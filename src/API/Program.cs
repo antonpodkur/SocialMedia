@@ -20,7 +20,6 @@ builder.Services.AddBll();
 var key = Encoding.ASCII.GetBytes(builder.Configuration["JwtConfig:Secret"]);
 var issuer = builder.Configuration["JwtConfig:Issuer"];
 var audience = builder.Configuration["JwtConfig:Audience"];
-var expireHours = builder.Configuration["JwtConfig:expireHours"];
 
 var tokenValidationParams = new TokenValidationParameters()
 {

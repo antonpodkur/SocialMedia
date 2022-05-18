@@ -55,4 +55,23 @@ public class HashtagService: IHashtagService
     {
         return await _unitOfWork.Hashtags.GetByIdAsync(id);
     }
+    
+    public async Task AddHashtagToPost(string postId, HashtagDTO hashtagDto)
+    {
+        var hashtag = _mapper.Map<Hashtag>(hashtagDto);
+        hashtag.Id = Guid.NewGuid();
+        await _unitOfWork.Hashtags.CreateHashtagAndAddToPost(postId, hashtag);
+    }
+
+    public async Task<IEnumerable<HashtagDTO>> GetPostHashtags(string postId)
+    {
+        var hashtags = await _unitOfWork.Posts.GetPostHashtags(postId);
+        var hashtagDtos = _mapper.Map<IEnumerable<HashtagDTO>>(hashtags);
+        return hashtagDtos;
+    }
+
+    public async Task RemoveHashtagFromPost(string postId, string hashtagId)
+    {
+        await _unitOfWork.Hashtags.RemoveHashtagFromPost(postId, hashtagId);
+    }
 }

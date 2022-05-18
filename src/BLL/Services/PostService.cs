@@ -27,7 +27,7 @@ public class PostService: IPostService
 
     public async Task<IEnumerable<PostDTO>> GetAllAsync()
     {
-        var posts = await _unitOfWork.Posts.GetAllAsync();
+        var posts = await _unitOfWork.Posts.GetAllPosts();
         var postDtos = _mapper.Map<IEnumerable<Post>, IEnumerable<PostDTO>>(posts);
         return postDtos;
     }
@@ -56,5 +56,11 @@ public class PostService: IPostService
     public async Task<Post> GetPostByIdAsync(string id)
     {
         return await _unitOfWork.Posts.GetByIdAsync(id);
+    }
+
+    public async Task<IEnumerable<PostDTO>> CurrentUserGetAllPosts(string id)
+    {
+        var posts = await  _unitOfWork.Posts.GetPostsByAuthor(id);
+        return _mapper.Map<IEnumerable<PostDTO>>(posts);
     }
 }

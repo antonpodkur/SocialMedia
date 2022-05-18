@@ -11,4 +11,8 @@ public interface IHashtagService
     Task UpdateAsync(HashtagDTO hashtagDTO);
     Task RemoveAsync(string id);
     Task<Hashtag> GetHashtagByIdAsync(string id);
+    
+    Task<IEnumerable<HashtagDTO>> GetPostHashtags(string postId);
+    Task AddHashtagToPost(string postId, HashtagDTO hashtagDto);
+    Task RemoveHashtagFromPost(string postId, string hashtagId);
 }

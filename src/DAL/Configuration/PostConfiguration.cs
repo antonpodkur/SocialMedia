@@ -18,7 +18,11 @@ public class PostConfiguration: IEntityTypeConfiguration<Post>
 
         builder.Property(p => p.Date).IsRequired();
 
-        builder.HasMany(p => p.Topics);
-        builder.HasMany(p => p.Hashtags);
+        builder.HasMany(p => p.Topics)
+            .WithOne(pt => pt.Post)
+            .HasForeignKey(pt => pt.PostId).HasPrincipalKey(p => p.Id);
+        builder.HasMany(p => p.Hashtags)
+            .WithOne(ph => ph.Post)
+            .HasForeignKey(ph => ph.PostId).HasPrincipalKey(p => p.Id);
     }
 }

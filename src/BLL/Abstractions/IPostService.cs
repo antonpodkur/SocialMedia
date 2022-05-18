@@ -11,4 +11,5 @@ public interface IPostService
     Task UpdateAsync(PostDTO postDto);
     Task RemoveAsync(string id);
     Task<Post> GetPostByIdAsync(string id);
+    Task<IEnumerable<PostDTO>> CurrentUserGetAllPosts(string id);
 }

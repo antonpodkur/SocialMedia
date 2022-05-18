@@ -12,5 +12,10 @@ public class TopicConfiguration: IEntityTypeConfiguration<Topic>
 
         builder.Property(t => t.Id).IsRequired();
         builder.Property(t => t.Name).IsRequired();
+
+        builder.HasMany(t => t.Posts)
+            .WithOne(pt => pt.Topic)
+            .HasForeignKey(pt => pt.TopicId)
+            .HasPrincipalKey(t => t.Id);
     }
 }

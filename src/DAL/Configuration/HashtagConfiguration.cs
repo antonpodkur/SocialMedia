@@ -12,5 +12,10 @@ public class HashtagConfiguration: IEntityTypeConfiguration<Hashtag>
 
         builder.Property(h => h.Id).IsRequired();
         builder.Property(h => h.Name).IsRequired();
+        
+        builder.HasMany(h => h.Posts)
+            .WithOne(ph => ph.Hashtag)
+            .HasForeignKey(ph => ph.HashtagId)
+            .HasPrincipalKey(h => h.Id);
     }
 }
