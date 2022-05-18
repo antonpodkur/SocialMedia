@@ -11,4 +11,8 @@ public interface ITopicService
     Task UpdateAsync(TopicDTO topicDTO);
     Task RemoveAsync(string id);
     Task<Topic> GetTopicByIdAsync(string id);
+    
+    Task<IEnumerable<TopicDTO>> GetPostTopics(string postId);
+    Task AddTopicToPost(string postId, TopicDTO topicDto);
+    Task RemoveTopicFromPost(string postId, string topicId);
 }

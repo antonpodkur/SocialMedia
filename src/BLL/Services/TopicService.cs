@@ -57,4 +57,23 @@ public class TopicService: ITopicService
     {
         return await _unitOfWork.Topics.GetByIdAsync(id);
     }
+
+    public async Task<IEnumerable<TopicDTO>> GetPostTopics(string postId)
+    {
+        var topics = await _unitOfWork.Posts.GetPostTopics(postId);
+        var topicDtos = _mapper.Map<IEnumerable<TopicDTO>>(topics);
+        return topicDtos;
+    }
+
+    public async Task AddTopicToPost(string postId, TopicDTO topicDto)
+    {
+        var topic = _mapper.Map<Topic>(topicDto);
+        topic.Id = Guid.NewGuid();
+        await _unitOfWork.Topics.CreateTopicAndAddToPost(postId, topic);
+    }
+
+    public async Task RemoveTopicFromPost(string postId, string topicId)
+    {
+        await _unitOfWork.Topics.RemoveTopicFromPost(postId, topicId);
+    }
 }

@@ -9,4 +9,6 @@ public interface IPostRepository: IRepository<Post>
     Task<IEnumerable<Post>> GetPostsByAuthor(string authorId);
     Task<IEnumerable<Post>> GetAllPosts();
     Task<IEnumerable<Hashtag>> GetPostHashtags(string postId);
+    Task<IEnumerable<Topic>> GetPostTopics(string postId);
+
 }

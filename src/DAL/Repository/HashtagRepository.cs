@@ -74,5 +74,3 @@ public class HashtagRepository: Repository<Hashtag>, IHashtagRepository
         }
     }
 }
-
-//TODO Add repositories for PostHashtag and PostTopic to store logic in them.

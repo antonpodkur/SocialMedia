@@ -71,4 +71,19 @@ public class PostRepository: Repository<Post>, IPostRepository
         return hashtags;
     }
 
+    public async Task<IEnumerable<Topic>> GetPostTopics(string postId)
+    {
+        var post = await GetByIdAsync(postId);
+        var topics = new List<Topic>();
+        foreach (var postTopic in post.Topics)
+        {
+            var topic = await _context.Set<Topic>().FindAsync(postTopic.TopicId);
+            if (topic != null)
+            {
+                topics.Add(topic);
+            }
+        }
+
+        return topics;
+    }
 }
